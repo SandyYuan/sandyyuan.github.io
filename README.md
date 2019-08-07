@@ -8,7 +8,7 @@ Before Harvard, I got my Bachelors degree in Astrophysics at Princeton, where I 
 
 Aside from work, I enjoy tennis, DJing, and good sushi. 
 
-You can find me on [LinkedIn](https://www.linkedin.com/in/sandy-yuan-23a39510a/) or you can reach me at my email sihan.yuan@cfa.harvard.edu. 
+You can find me on [LinkedIn](https://www.linkedin.com/in/sandy-yuan-23a39510a/) or you can reach me at my email <sihan.yuan@cfa.harvard.edu>. 
 
 ### Markdown
 
