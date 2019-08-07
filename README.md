@@ -1,8 +1,14 @@
 ## Introduction
 
-You can use the [editor on GitHub](https://github.com/SandyYuan/sandyyuan.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to my website. I am a PhD candidate in Astrophysics at Harvard. I am interested in a wide range of topics in physical and observational cosmology. I am currently working with Prof. Daniel Eisenstein on cosmological statistics and galaxy-halo connection models. Some of my topics include the galaxy three-point correlation function (3PCF) in the squeeze limit, generalized halo occupation models, and galaxy-galaxy lensing. We are broadly interested in methodologies that improve clustering measurements and their interpretations.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I am currently an observer/telescope operator at Harvard Observing Project (HOP), where we host open observing nights to look at fun yet scientifically interesting targets. I am also a founding member of Open Labs At Harvard, with the goal of promoting science and research education among underpriviledged K-12 students in the Greater Boston area.
+
+Before Harvard, I got my Bachelors degree in Astrophysics at Princeton, where I worked on various exciting projects such as identifying obscured quasars in SDSS, looking for ultra diffuse galaxies in HSC, and simulating progenitor gas clouds in the early Universe. 
+
+Aside from work, I enjoy tennis, DJing, and good sushi. 
+
+You can find me on [LinkedIn](https://www.linkedin.com/in/sandy-yuan-23a39510a/) or you can reach me at my email sihan.yuan@cfa.harvard.edu. 
 
 ### Markdown
 
