@@ -1,7 +1,150 @@
 /* 
-   Direct CSS overrides to fix layout issues
+   Modern styling overrides with improved typography and spacing
    These rules use !important to ensure they take precedence
 */
+
+/* Modern typography improvements */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em !important;
+}
+
+h1 {
+  font-size: 2.25rem !important;
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-size: 1.875rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
+
+/* Modern author profile styling */
+.author__avatar img {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.author__name {
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+}
+
+.author__bio {
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+/* Modern button and link styling */
+.btn {
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Improved spacing and modern cards */
+.page__content {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Modern publications styling */
+#publications-container .publication-item {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+#publications-container .publication-item:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-2px) !important;
+}
+
+.publication-title {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.publication-authors {
+  color: #64748b !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.publication-venue {
+  color: #475569 !important;
+  font-size: 0.85rem !important;
+  font-style: italic !important;
+}
+
+.citation-count {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 6px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  display: inline-block !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Modern navigation and buttons */
+.publication-tabs {
+  margin-bottom: 2rem !important;
+}
+
+.publication-tabs button {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #64748b !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  margin-right: 0.5rem !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.publication-tabs button.active,
+.publication-tabs button:hover {
+  background: #2563eb !important;
+  color: white !important;
+  border-color: #2563eb !important;
+}
+
+/* Enhanced summary statistics */
+.publication-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 1.5rem !important;
+  border-radius: 12px !important;
+  margin-bottom: 2rem !important;
+}
+
+.publication-summary strong {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
 
 /* Move entire layout to the right */
 body {

@@ -1,0 +1,178 @@
+/* 
+   Direct CSS overrides to fix layout issues
+   These rules use !important to ensure they take precedence
+*/
+
+/* Move entire layout to the right */
+body {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+}
+
+/* Header and footer adjustments */
+.masthead {
+  margin-left: -5.5% !important;
+  margin-right: -5.5% !important;
+  padding-left: 5.5% !important;
+  padding-right: 5.5% !important;
+}
+
+.page__footer {
+  margin-left: -5.5% !important;
+  margin-right: -5.5% !important;
+  padding-left: 5.5% !important;
+  padding-right: 5.5% !important;
+  clear: both !important;
+}
+
+/* Fix sidebar and main content positioning */
+.sidebar {
+  position: relative !important;
+  transform: none !important;
+  float: left !important;
+  width: 250px !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 20px !important;
+  z-index: 10 !important;
+}
+
+.page {
+  float: right !important;
+  width: calc(100% - 280px) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  clear: none !important;
+  position: relative !important;
+  padding: 1.5em !important;
+}
+
+#main {
+  clear: both !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-top: 2em !important;
+}
+
+.layout--single {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+}
+
+/* Media queries for responsive layout */
+@media (min-width: 64em) {
+  .sidebar {
+    width: 250px !important;
+    float: left !important;
+    padding-right: 20px !important;
+  }
+  
+  .page {
+    width: calc(100% - 280px) !important;
+    float: right !important;
+    padding: 2em !important;
+  }
+  
+  .archive, .page__related {
+    width: calc(100% - 280px) !important;
+    float: right !important;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .sidebar {
+    width: 200px !important;
+    float: left !important;
+    padding-right: 20px !important;
+  }
+  
+  .page {
+    width: calc(100% - 220px) !important;
+    float: right !important;
+    padding: 1.5em !important;
+  }
+  
+  .archive, .page__related {
+    width: calc(100% - 220px) !important;
+    float: right !important;
+  }
+}
+
+@media (max-width: 48em) {
+  body {
+    padding-left: 3% !important;
+    padding-right: 3% !important;
+    max-width: 94% !important;
+  }
+  
+  .masthead, .page__footer {
+    margin-left: -3.2% !important;
+    margin-right: -3.2% !important;
+    padding-left: 3.2% !important;
+    padding-right: 3.2% !important;
+  }
+  
+  .sidebar {
+    width: 100% !important;
+    float: none !important;
+    padding-right: 0 !important;
+  }
+  
+  .page {
+    width: 100% !important;
+    float: none !important;
+    padding: 1em !important;
+  }
+  
+  .archive, .page__related {
+    width: 100% !important;
+    float: none !important;
+  }
+}
+
+/* CV page overrides */
+.layout--cv .sidebar {
+  width: 180px !important;
+  padding-right: 10px !important;
+}
+
+.layout--cv .page {
+  width: calc(100% - 190px) !important;
+  padding: 0.5em !important;
+}
+
+.layout--cv .page__title {
+  margin-top: 0 !important;
+  margin-bottom: 0.5em !important;
+}
+
+.layout--cv .page__content {
+  padding: 0 !important;
+}
+
+.cv-container {
+  padding-bottom: 170% !important;
+}
+
+@media (min-width: 64em) {
+  .cv-container {
+    padding-bottom: 190% !important;
+  }
+}
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .cv-container {
+    padding-bottom: 200% !important;
+  }
+}
+
+@media (max-width: 48em) {
+  .cv-container {
+    padding-bottom: 220% !important;
+  }
+} 
