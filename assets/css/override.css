@@ -1,19 +1,103 @@
 /* 
-   Modern styling overrides with improved typography and spacing
+   Modern styling overrides with dark/light mode support
    These rules use !important to ensure they take precedence
 */
 
-/* Modern typography improvements */
+/* CSS Custom Properties for Theme Colors */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --text-light: #64748b;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+  --sidebar-bg: #ffffff;
+  --code-bg: #f8fafc;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode colors (default) */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #e2e8f0;
+  --text-light: #94a3b8;
+  --border-color: #334155;
+  --card-bg: #1e293b;
+  --sidebar-bg: #1e293b;
+  --code-bg: #1e293b;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Light mode colors */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --text-light: #64748b;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+  --sidebar-bg: #ffffff;
+  --code-bg: #f8fafc;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  z-index: 1000 !important;
+  background: var(--card-bg) !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 50px !important;
+  padding: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow) !important;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) !important;
+  box-shadow: var(--shadow-hover) !important;
+}
+
+.theme-toggle svg {
+  width: 24px !important;
+  height: 24px !important;
+  fill: var(--text-color) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Hide sun icon in dark mode, moon icon in light mode */
+[data-theme="dark"] .sun-icon {
+  display: none !important;
+}
+
+[data-theme="light"] .moon-icon {
+  display: none !important;
+}
+
+/* Apply theme colors to body and main elements */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   line-height: 1.6 !important;
   font-weight: 400 !important;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-weight: 600 !important;
   letter-spacing: -0.025em !important;
+  color: var(--text-color) !important;
 }
 
 h1 {
@@ -29,19 +113,27 @@ h3 {
   font-size: 1.5rem !important;
 }
 
-/* Modern author profile styling */
+/* Modern author profile styling with theming */
+.sidebar {
+  background-color: var(--sidebar-bg) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow) !important;
+  transition: all 0.3s ease !important;
+}
+
 .author__avatar img {
   border-radius: 12px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: var(--shadow-hover) !important;
 }
 
 .author__name {
   font-weight: 600 !important;
   font-size: 1.25rem !important;
+  color: var(--text-color) !important;
 }
 
 .author__bio {
-  color: #64748b !important;
+  color: var(--text-light) !important;
   font-weight: 500 !important;
 }
 
@@ -63,37 +155,42 @@ h3 {
   line-height: 1.7 !important;
 }
 
-/* Modern publications styling */
+/* Modern publications styling with theming */
+.page__content {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
 #publications-container .publication-item {
-  background: #ffffff !important;
-  border: 1px solid #e2e8f0 !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: 12px !important;
   padding: 1.5rem !important;
   margin-bottom: 1.5rem !important;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  box-shadow: var(--shadow) !important;
   transition: all 0.2s ease-in-out !important;
 }
 
 #publications-container .publication-item:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: var(--shadow-hover) !important;
   transform: translateY(-2px) !important;
 }
 
 .publication-title {
   font-size: 1.1rem !important;
   font-weight: 600 !important;
-  color: #1e293b !important;
+  color: var(--text-color) !important;
   margin-bottom: 0.5rem !important;
 }
 
 .publication-authors {
-  color: #64748b !important;
+  color: var(--text-light) !important;
   font-size: 0.9rem !important;
   margin-bottom: 0.25rem !important;
 }
 
 .publication-venue {
-  color: #475569 !important;
+  color: var(--text-light) !important;
   font-size: 0.85rem !important;
   font-style: italic !important;
 }
@@ -109,15 +206,24 @@ h3 {
   margin-top: 0.5rem !important;
 }
 
-/* Modern navigation and buttons */
+/* Modern navigation and buttons with theming */
+.masthead {
+  background-color: var(--bg-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.masthead__inner-wrap nav ul li a {
+  color: var(--text-color) !important;
+}
+
 .publication-tabs {
   margin-bottom: 2rem !important;
 }
 
 .publication-tabs button {
-  background: #f8fafc !important;
-  border: 1px solid #e2e8f0 !important;
-  color: #64748b !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-light) !important;
   padding: 0.75rem 1.5rem !important;
   border-radius: 8px !important;
   font-weight: 500 !important;
@@ -130,6 +236,13 @@ h3 {
   background: #2563eb !important;
   color: white !important;
   border-color: #2563eb !important;
+}
+
+/* Footer theming */
+.page__footer {
+  background-color: var(--bg-color) !important;
+  color: var(--text-light) !important;
+  border-top: 1px solid var(--border-color) !important;
 }
 
 /* Enhanced summary statistics */

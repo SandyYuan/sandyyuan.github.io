@@ -57,12 +57,21 @@ $darker-gray                : #1e293b;
 $light-gray                 : #f1f5f9;
 $lighter-gray               : #f8fafc;
 
+/* Light mode colors */
 $body-color                 : #fff;
 $background-color           : #fff;
 $code-background-color      : #f8fafc;
 $code-background-color-dark : $light-gray;
 $text-color                 : $darker-gray;
 $border-color               : #e2e8f0;
+
+/* Dark mode colors */
+$dark-body-color            : #0f172a;
+$dark-background-color      : #0f172a;
+$dark-code-background       : #1e293b;
+$dark-text-color            : #e2e8f0;
+$dark-border-color          : #334155;
+$dark-light-text            : #94a3b8;
 
 $primary-color              : #2563eb;
 $success-color              : #62c462;
