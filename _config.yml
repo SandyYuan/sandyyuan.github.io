@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Sihan (Sandy) Yuan"
   avatar           : "profile.jpg"
-  bio              : "KIPAC Fellow @ Stanford"
-  location         : "Stanford, CA"
-  employer         : "Stanford University"
+  bio              : "AI Research"
+  location         : "San Francisco, CA"
+  employer         : "Fireworks.ai"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=qXXfNQEAAAAJ&hl=en"
   email            : "sandyyuan94@gmail.com"
